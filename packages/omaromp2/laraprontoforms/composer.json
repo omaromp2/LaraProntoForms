@@ -1,0 +1,23 @@
+{
+    "name": "omaromp2/laraprontoforms",
+    "description": "Package for using ProntoForms in Laravel",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "omaromp2\\laraprontoforms\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Omar Ponce"
+        }
+    ],
+    "require": {},
+    "extra": {
+        "laravel": {
+            "providers": [
+                "omaromp2\\laraprontoforms\\ProntoformsServiceProvider"
+            ]
+        }
+    }
+}
