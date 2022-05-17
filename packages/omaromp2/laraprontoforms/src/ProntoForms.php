@@ -50,9 +50,5 @@ class ProntoForms
 
             return $th->getMessage();
         }
-
-
-
-
     }
 }
