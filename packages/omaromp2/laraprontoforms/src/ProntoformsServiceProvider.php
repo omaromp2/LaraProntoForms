@@ -10,6 +10,9 @@ class ProntoformsServiceProvider extends ServiceProvider
     {
         // Begin app
         // dd("LaraProntoforms Service Provider Booted");
+        $this->publishes([
+            __DIR__ . '/../config/prontoforms.php' => config_path('prontoforms.php'),
+        ], 'config');
     }
 
     public function register()

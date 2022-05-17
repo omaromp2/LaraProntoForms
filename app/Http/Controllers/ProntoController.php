@@ -10,7 +10,7 @@ class ProntoController extends Controller
     {
         # Metodo para llamar a ProntoForms...
 
-        $questions = ['ShipNumber' => '123' , 'OrderNumber' => '123', 'name' => 'Omar Ponce'];
+        $questions = ['ShipNumber' => '12345' , 'OrderNumber' => '678910', 'name' => 'Omar Ponce el Dev'];
 
         return ProntoForms::sendform($questions);
     }

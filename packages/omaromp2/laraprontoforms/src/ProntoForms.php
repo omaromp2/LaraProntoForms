@@ -11,13 +11,13 @@ class ProntoForms
     {
         # snd the event to the event to Prontoforms.
 
-        // Sacamos el Form ID
-        $formId = (!$formId) ? env('PRONTO_FORM_ID') : $formId;
-        $userId = (!$userId) ? env('PRONTO_USER_ID') : $userId;
+        // Get the IDs
+        $formId = (!$formId) ? config('prontoforms.form_id') : $formId;
+        $userId = (!$userId) ? config('prontoforms.user_id') : $userId;
 
         $prontoData = collect();
         foreach ($questions as $key => $value) {
-            // Pasamos los valores del Formulario a una colección
+            // Pass the vals to a collection
             $prontoData->push([
                 "label" => $key,
                 "answer" => $value
@@ -31,14 +31,14 @@ class ProntoForms
         ];
 
 
-        // Snd the evento to Prontoforms
+        // Snd the event to Prontoforms
         try {
             //Request a ProntoForms...
 
-            $response = Http::withBasicAuth(env('PRONTO_USER'), env('PRONTO_PASS'))
+            $response = Http::withBasicAuth(config('prontoforms.user'), config('prontoforms.pass'))
             ->post('https://api.prontoforms.com/api/1.1/data/dispatch.json', $prontoFile);
 
-            // Get teh body of the response
+            // Get the body of the response
             $res = $response->getBody();
             // Decode the body of the response
             $res = json_decode($res, true);
