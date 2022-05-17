@@ -12,7 +12,9 @@
             "name": "Omar Ponce"
         }
     ],
-    "require": {},
+    "require": {
+        "guzzlehttp/guzzle": "^7.4"
+    },
     "extra": {
         "laravel": {
             "providers": [

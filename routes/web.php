@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ProntoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -17,6 +18,4 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('test', function () {
-    echo 'Test passed!';
-});
+Route::get('pronto', ProntoController::class . '@test');
