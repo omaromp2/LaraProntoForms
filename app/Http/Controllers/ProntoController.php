@@ -14,4 +14,15 @@ class ProntoController extends Controller
 
         return ProntoForms::sendform($questions);
     }
+
+    public function searchOrd()
+    {
+        # Prueba de busqueda de orden de ProntoFOrms ...
+        $subId = 18252346108;
+
+        return ProntoForms::fetchForm($subId);
+
+
+    }
+
 }

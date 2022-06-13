@@ -19,3 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('pronto', ProntoController::class . '@test');
+
+Route::get('test', ProntoController::class . '@searchOrd');
