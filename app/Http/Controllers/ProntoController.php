@@ -19,10 +19,15 @@ class ProntoController extends Controller
     {
         # Prueba de busqueda de orden de ProntoFOrms ...
         $subId = 18252346108;
-
         return ProntoForms::fetchForm($subId);
-
-
     }
+
+    public function getPDF()
+    {
+        # code...
+        $subId = 18252346108;
+        return ProntoForms::fetchPDF($subId);
+    }
+
 
 }

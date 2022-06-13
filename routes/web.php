@@ -21,3 +21,4 @@ Route::get('/', function () {
 Route::get('pronto', ProntoController::class . '@test');
 
 Route::get('test', ProntoController::class . '@searchOrd');
+Route::get('pdf', ProntoController::class . '@getPdf');
